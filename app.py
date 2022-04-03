@@ -99,7 +99,7 @@ def delete(pet_id):
         db.session.commit()
     except Exception as e:
         db.session.rollback()
-    return redirect(url_for("homepage",_scheme="https",_external=True))
+    return redirect(url_for("homepage"))
 
 
 @app.route("/signup", methods=["POST", "GET"])
@@ -137,7 +137,7 @@ def login():
 def logout():
     if 'user' in session:
         session.pop('user')
-    return redirect(url_for('homepage', _scheme='https', _external=True))
+    return redirect(url_for('homepage'))
     
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=3000)
