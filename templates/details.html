@@ -6,7 +6,7 @@
     <div style="float:left; border-style:double;">
         <img src= "{{url_for('static', filename = pet.id|string+".jpg")}}" height="350" >
         <br>
-        <button type="submit" style="background:red" onclick="location.href='{{url_for('delete',pet_id=pet.id)}}'"> Delete Pet </button>
+        <button type="submit" style="background:red" onclick="location.href=`{{url_for('delete',pet_id=pet.id)}}`"> Delete Pet </button>
     </div> 
     <div style="float:left; margin:10px;"> 
         <div>
